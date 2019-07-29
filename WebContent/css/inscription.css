@@ -1,0 +1,12 @@
+@charset "ISO-8859-1";
+.inscriptionInput
+{
+	text-align: center;
+}
+#inscription, #connexion
+{
+	margin: auto;
+	width: 500px;
+	border: 2px double orange;
+	padding: 20px;
+}

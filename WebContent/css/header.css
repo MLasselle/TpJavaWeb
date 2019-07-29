@@ -1,0 +1,181 @@
+@font-face {
+    font-family: 'minefont';
+    src: url('../font/Pacifico.ttf');
+}
+body
+{
+	background-color: #0f0f0f;
+}
+header
+{
+	background-image: url("../image/mainPicture.png");
+	background-repeat: no-repeat;
+	background-size: 100% 435px;
+	background-position: bottom;
+	height: 500px;
+	width: 90%;
+	max-width: 1500px;
+	min-width: 1000px;
+	margin: auto;
+	border: 5px groove brown;
+	border-radius: 10px;
+	
+	
+}
+#menu
+{
+	font-family:minefont;
+	background-image: url("../image/MenuBg.png");
+	background-repeat: repeat-x;
+	border-radius: 5px;
+	width: 1000px;
+	height: 50px;
+	margin: auto;
+	margin-top: 37px;
+	border: 3px solid;
+	border-image: url('../image/border.png') 30 stretch;
+}
+#menu li
+{
+	display: inline-block;
+	margin-left: 150px;
+	font-size: 1.25em;
+	
+}
+#menu li a
+{
+	color: orange;
+	text-decoration: none;
+}
+#menu li a:hover
+{
+	color: orangered;
+	text-decoration: none;
+}
+#menu ul
+{
+	height: 50px;
+	margin-top: 3px;
+}
+#logo 
+{
+	display:inline-block;
+	background-image:url("../image/logo.png");
+	background-repeat:no-repeat;
+	background-size: 125px 125px;
+	float: left;
+	margin-left:30px;
+	margin-top: -37px;
+	width:125px;
+	height:125px;
+}
+#logo:hover
+{
+	background-image:url("../image/logoHover.png");
+	background-repeat:no-repeat;
+	background-size: 125px 125px;
+}
+#socialButton
+{
+	float:left;
+	width: 100%;
+	margin: -37px 15%;
+	height:25px;
+	display: inline-block;
+
+	
+}
+#socialButton a
+{
+	display:inline-block;
+	margin-top:5px;
+	margin-left:10px;
+	width: 25px;
+	height:25px;
+	text-decoration:none;
+}
+#socialButton p
+{
+	display:inline-block;
+	margin-left:500px;
+	width: 200px;
+	height:25px;
+	text-decoration:none;
+	color: orange;
+}
+.fb
+{
+	background-image: url("../image/facebookLogo.png");
+	background-size: 25px 25px;
+}
+.tw
+{
+	background-image: url("../image/twitterLogo.png");
+	background-size: 25px 25px;
+}
+.ld
+{
+	background-image: url("../image/linkedinLogo.png");
+	background-size: 25px 25px;
+}
+.fb:hover
+{
+	background-image: url("../image/facebookLogoHover.png");
+	background-size: 25px 25px;
+}
+.tw:hover
+{
+	background-image: url("../image/twitterLogoHover.png");
+	background-size: 25px 25px;
+}
+.ld:hover
+{
+	background-image: url("../image/linkedinLogoHover.png");
+	background-size: 25px 25px;
+}
+#mainBoxIndex
+{
+	background-color: #0f0f0f;
+	width: 1000px;
+	min-height: 500px;
+	border: 5px groove brown;
+	border-radius: 10px;
+	margin: auto;
+	margin-top: -100px;
+	color: orange;
+}
+.header-search {
+  padding: 15px 0px;
+  margin-top: 20px;
+  
+}
+
+.header-search form {
+  position: relative;
+  margin: auto;
+  width: 50%;
+}
+
+.header-search form .input-select {
+  margin-right: -4px;
+  border-radius: 40px 0px 0px 40px;
+  background: brown;
+  height: 46px;
+  width: 20%;
+}
+
+.header-search form .input {
+  width: 60%;
+  margin-right: -4px;
+  height: 40px;
+}
+
+.header-search form .search-btn {
+  height: 46px;
+  width: 19%;
+  background: brown;
+  color: #FFF;
+  font-weight: 700;
+  border: none;
+  border-radius: 0px 40px 40px 0px;
+}

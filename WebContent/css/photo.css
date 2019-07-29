@@ -1,0 +1,50 @@
+
+#mainBoxIndex > h1
+{
+	text-align: center;
+	font-size: 2em;
+	font-family: minefont;
+}
+.photoConteneur
+{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: space-around;
+}
+
+.photoConteneur a
+{
+	border:2px solid;
+	border-image: url('border.png') 30 stretch;
+	text-decoration: none;
+	color: orange;
+	margin-bottom:20px;
+}
+.photoConteneur a:hover
+{
+	border:4px solid;
+	border-image: url('border.png') 30 stretch;
+}
+.photoConteneur div 
+{
+	width: 300px;
+	height: 350px;
+	
+}
+.photoConteneur div img
+{
+	margin:10px;
+	width:95%;
+	height:60%;
+}
+.photoConteneur div p,h3
+{
+	
+	text-align:center;
+}
+.photoConteneur div h3
+{
+	
+	text-align:center;
+	text-decoration: underline;
+}

@@ -1,0 +1,14 @@
+footer
+{
+	width:1000px;
+	margin:10px auto 0px auto;
+	border-image: url('../image/borderDegrader.png') 30 stretch;
+	border-top: 1px solid;
+	text-align:center;
+	color:darkorange;
+}
+iframe
+{
+	float:right;
+	margin-top:-75px;
+}

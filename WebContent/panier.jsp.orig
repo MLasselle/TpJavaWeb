@@ -1,0 +1,112 @@
+<%@page import="java.util.Map"%>
+<%@page import="java.util.HashMap"%>
+<%@page import="entitee.ItemPanier"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@include file="include/header.jsp"%>
+<%
+	HashMap<Integer, ItemPanier> panier = (request.getSession().getAttribute("panier") instanceof HashMap)
+			? (HashMap) request.getSession().getAttribute("panier")
+			: null;
+%>
+<section id="mainBoxIndex">
+	<div class="recherche">
+		<div class="header-search">
+			<form method="post" action="produitControler">
+				<select name="categorie" class="input-select">
+					<option value="0">Tous</option>
+					<%
+						for (Categorie categorie : ((ArrayList<Categorie>) (request.getAttribute("categories")))) {
+					%>
+					<option value="<%=categorie.getId()%>"><%=categorie.getNom()%></option>
+					<%
+						}
+					%>
+				</select> <input type="text" name="recherche" class="input"
+					placeholder="Chercher ici">
+				<button class="search-btn">Recherche</button>
+			</form>
+		</div>
+<<<<<<< HEAD
+<h1>Panier</h1>
+<table id="panierTable">
+	<tr>
+		<th>Image</th>
+		<th>Nom</th>
+		<th>Ajouter</th>
+		<th>Quantiter</th>
+		<th>Enlever</th>
+	</tr>
+	<%
+	if(panier != null)
+	{
+		for(Map.Entry<Integer, ItemPanier> e : panier.entrySet())
+		{%>
+			<tr>
+				<td><img src="imageProduit/<%= e.getValue().getProduit().getId() %>/1.jpg"></td>
+				<td><%= e.getValue().getProduit().getTitre() %></td>
+				<td>
+					<form>
+						<input type="submit" value="+" name="paramValue">
+						<input type="hidden" name="idProduit" value="<%= e.getValue().getProduit().getId() %>">
+					</form>
+				</td>
+				<td><%= e.getValue().getQty() %></td>
+				<td>
+					<form>
+						<input type="submit" value="-" name="paramValue">
+						<input type="hidden" name="idProduit" value="<%= e.getValue().getProduit().getId() %>">
+					</form>
+				</td>
+			</tr>
+		<%}
+	}
+	%>
+</table>
+=======
+	</div>
+	<h1>Panier</h1>
+	<table>
+		<tr>
+			<th>Image</th>
+			<th>Nom</th>
+			<th>Ajouter</th>
+			<th>Quantiter</th>
+			<th>Enlever</th>
+		</tr>
+		<%
+			if (panier != null) {
+				for (Map.Entry<Integer, ItemPanier> e : panier.entrySet()) {
+		%>
+		<tr>
+			<td><img
+				src="imageProduit/<%=e.getValue().getProduit().getId()%>/1.jpg"></td>
+			<td><%=e.getValue().getProduit().getTitre()%></td>
+			<td>
+				<form>
+					<input type="submit" value="+" name="paramValue"> <input
+						type="hidden" name="idProduit"
+						value="<%=e.getValue().getProduit().getId()%>">
+				</form>
+			</td>
+			<td><%=e.getValue().getQty()%></td>
+			<td>
+				<form>
+					<input type="submit" value="-" name="paramValue"> <input
+						type="hidden" name="idProduit"
+						value="<%=e.getValue().getProduit().getId()%>">
+				</form>
+				<form>
+					<input type="submit" value="Commander" name="paramValue"/> 
+					<input type="hidden" name="commander" value="<%=e.getValue().getProduit().getId()%>">
+				</form>
+			</td>
+		</tr>
+		<%
+			}
+			}
+		%>
+	</table>
+>>>>>>> maximeEmail
+
+	<%@include file="include/footer.jsp"%>

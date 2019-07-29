@@ -1,0 +1,12 @@
+@charset "ISO-8859-1";
+#panierTable tr td
+{
+	border: 1px solid grey;
+	height: 150px;
+	text-align: center;
+}
+#panierTable tr td img
+{
+	height: 150px;
+	width: 400px;
+}
